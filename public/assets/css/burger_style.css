@@ -1,0 +1,44 @@
+body{
+  background-color: white;
+  text-align: center;
+  padding-top: 40px;
+  font-family: 'Josefin Slab', serif;
+}
+
+h1{
+  margin: 20px 0 20px 0;
+}
+
+h2{
+  font-size: 20px;
+  margin-top: 40px;
+  /* font-weight: 700; */
+}
+
+ul li{
+  list-style: none;
+  /* line-height: 4; */
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+ul{
+  text-align: left;
+}
+
+img{
+  height: 100px;
+}
+
+.form-control{
+  margin: 0 auto !important;
+}
+
+.form-group{
+  margin-bottom: 0px;
+}
+
+.devourBurger{
+  float: right;
+  padding: 1px 5px;
+}

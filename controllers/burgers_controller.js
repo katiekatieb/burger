@@ -27,23 +27,20 @@ router.put("/api/burgers/:id", function(req, res) {
     res.json({ id: result.insertId });
   });
 
-
-  router.delete("/api/burgers/:id", function(req, res) {
-    var id = req.params.id;
-  
-    burger.removeOne(id, function(result) {
-      if (result.affectedRows == 0) {
-        return res.status(404).end();
-      } else {
-        res.json({ id: result.insertId });
-        // res.status(200).end();
-      }
-    });
-  });
-
 });
 
+router.delete("/api/burgers/:id", function(req, res) {
+  var id = req.params.id;
 
+  burger.removeOne(id, function(result) {
+    if (result.affectedRows == 0) {
+      return res.status(404).end();
+    } else {
+      res.json({ id: result.insertId });
+      res.status(200).end();
+    }
+  });
+});
 
 
 module.exports = router;

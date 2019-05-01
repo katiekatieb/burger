@@ -24,6 +24,7 @@
           {{#if devoured}}
             <li>
               {{id}}. {{burger_name}} 
+              <button class="removeBurger btn btn-outline-secondary" data-id="{{id}}">Remove</button>
             </li>
           {{/if}}
         {{/each}}

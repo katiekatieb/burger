@@ -54,16 +54,13 @@ var orm = {
       cb(result);
     });
   },
-  removeOne: function(id){
+  removeOne: function(id, cb){
     var queryString = "DELETE FROM burgers WHERE id = ?";
     connection.query(queryString, [id], function(err, result) {
       if (err) {
-        return res.status(500).end();
+        throw err;
       }
-      else if (result.affectedRows === 0) {
-        return res.status(404).end();
-      }
-      res.status(200).end();
+      cb(result);
     });
   }
 }
